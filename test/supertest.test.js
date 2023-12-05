@@ -2,7 +2,7 @@ import chai from "chai";
 import supertest from "supertest";
 
 const expect = chai.expect;
-const requester = supertest("http://192.168.1.182:8080/");
+const requester = supertest("http://181.46.9.232:8080/");
 
 describe("API TEST", () => {
   let cookieName;
