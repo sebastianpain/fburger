@@ -9,7 +9,7 @@ dotenv.config({
   path:
     program.opts().mode === "DEVELOPMENT"
       ? "./.env.development"
-      : "./.env.production"
+      : "./.env"
 });
 
 export default {
