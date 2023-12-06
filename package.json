@@ -2,11 +2,11 @@
     "name": "fburger",
     "version": "1.0.0",
     "description": "",
-    "main": "app.js",
+    "main": "index.js",
     "type": "module",
     "scripts": {
-        "start": "node ./src/app.js --mode PRODUCTION",
-        "dev": "nodemon -e yaml,js ./src/app.js --mode DEVELOPMENT",
+        "start": "node index.js --mode PRODUCTION",
+        "dev": "nodemon -e yaml,js index.js --mode DEVELOPMENT",
         "test": "mocha --timeout 10000 test/supertest.test.js"
     },
     "repository": {
