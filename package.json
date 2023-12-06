@@ -1,9 +1,10 @@
 {
     "name": "fburger",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "",
     "main": "app.js",
     "type": "module",
+    
     "scripts": {
         "start": "node ./src/app.js --mode PRODUCTION",
         "dev": "nodemon -e yaml,js ./src/app.js --mode DEVELOPMENT",
@@ -11,15 +12,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/sebastianpain/FbackBurger"
+        "url": "https://github.com/sebastianpain/fburger"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/sebastianpain/FbackBurger"
+        "url": "https://github.com/sebastianpain/fburger"
     },
-    "homepage": "https://github.com/sebastianpain/FbackBurger#readme",
+    "homepage": "https://github.com/sebastianpain/fburger#readme",
     "dependencies": {
         "@faker-js/faker": "8.0.2",
         "bcrypt": "5.1.1",
