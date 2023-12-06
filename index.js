@@ -1,6 +1,6 @@
 import MongoStore from "connect-mongo";
 import express from "express";
-import expressAsyncErrors from "express-async-errors";
+
 import compression from "express-compression";
 import handlebars from "express-handlebars";
 import session from "express-session";
