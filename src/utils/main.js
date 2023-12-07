@@ -180,7 +180,7 @@ export async function sendEmail(to, subject, htmlContent) {
 
 // MULTER
 import multer from "multer";
-import { __dirname } from "../../app.js";
+import { __dirname } from "../../index.js";
 
 const profilesStorage = multer.diskStorage({
   destination: (req, file, cb) => {

@@ -2,11 +2,11 @@
     "name": "fburger",
     "version": "0.0.0",
     "description": "",
-    "main": "app.js",
+    "main": "index.js",
     "type": "module",
     "scripts": {
-        "start": "node app.js --mode PRODUCTION",
-        "dev": "nodemon -e yaml,js app.js --mode DEVELOPMENT",
+        "start": "node index.js --mode PRODUCTION",
+        "dev": "nodemon -e yaml,js index.js --mode DEVELOPMENT",
         "test": "mocha --timeout 10000 test/supertest.test.js"
     },
     "repository": {
@@ -36,7 +36,7 @@
         "express-compression": "1.0.2",
         "express-handlebars": "7.0.7",
         "express-session": "1.17.3",
-        "mongoose": "7.2.2",
+        "mongoose": "^7.2.2",
         "mongoose-paginate-v2": "1.7.1",
         "multer": "1.4.5-lts.1",
         "nanoid": "4.0.2",
