@@ -1,6 +1,6 @@
 import MongoStore from "connect-mongo";
 import express from "express";
-import cors from 'cors';
+import "express-async-errors";
 import compression from "express-compression";
 import handlebars from "express-handlebars";
 import session from "express-session";
@@ -36,9 +36,9 @@ import { connectMongo, connectSocketServer, logger } from "./utils/main.js";
 // CONFIG BASICAS Y CONEXION A DB
 const app = express();
 app.use(compression({ brotli: { enabled: true, zlib: {} } }));
-app.use(cors());
-const PORT = process.env.PORT;
+const PORT = env.port;
 const fileStore = FileStore(session);
+
 connectMongo();
 
 // HTTP SERVER
@@ -49,7 +49,7 @@ const httpServer = app.listen(PORT, () => {
 connectSocketServer(httpServer);
 app.use(
   session({
-    secret: "dasdasdas",
+    secret: "jhasdkjh671246JHDAhjd",
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
@@ -87,7 +87,7 @@ const swaggerOptions = {
     openapi: "3.0.1",
     info: {
       title: "Documentación From Arg",
-      description: "Hamburguesas ONLINE",
+      description: "Hamburguesas Online",
     },
   },
   apis: [`${__dirname}/docs/**/*.yaml`],
