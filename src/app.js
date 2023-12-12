@@ -49,7 +49,7 @@ const httpServer = app.listen(PORT, () => {
 connectSocketServer(httpServer);
 app.use(
   session({
-    secret: "jhasdkjh671246JHDAhjd",
+    secret: "dasdasdas",
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
@@ -125,7 +125,7 @@ app.use("/purchases", purchasesRouter);
 app.use("/test-chat", testChatRouter);
 app.use("/error", errorRouter);
 
-app.get("*", (req, res, next) => {
+app.get("/", (req, res, next) => {
   try {
     CustomError.createError({
       name: "Page Not Found",
