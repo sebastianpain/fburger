@@ -1,4 +1,4 @@
-import MongoStore from "connect-mongo";
+import { MongoClient, ServerApiVersion } from 'mongodb';
 import express from "express";
 import "express-async-errors";
 import compression from "express-compression";
@@ -39,7 +39,28 @@ app.use(compression({ brotli: { enabled: true, zlib: {} } }));
 const PORT = env.port;
 const fileStore = FileStore(session);
 
-connectMongo();
+const uri = env.mongoUrl;
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+async function run() {
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    logger.info("Pinged your deployment. You successfully connected to MongoDB!");
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);
 
 // HTTP SERVER
 const httpServer = app.listen(PORT, () => {
@@ -47,18 +68,18 @@ const httpServer = app.listen(PORT, () => {
 });
 
 connectSocketServer(httpServer);
-app.use(
-  session({
-    secret: "dasdasdas",
-    resave: false,
-    saveUninitialized: false,
-    store: MongoStore.create({
-      mongoUrl: env.mongoUrl,
-      mongoOptions: { useNewUrlParser: true, useUnifiedTopology: true },
-      ttl: 3600,
-    }),
-  }),
-);
+//app.use(
+  // session({
+    //secret: "dasdasdas",
+    //resave: false,
+    //saveUninitialized: false,
+    //store: MongoStore.create({
+      //  mongoUrl: env.mongoUrl,
+      // mongoOptions: { useNewUrlParser: true, useUnifiedTopology: true },
+      // ttl: 3600,
+      // }),
+      //}),
+  //);
 
 // DIRNAME CONFIG
 import { dirname } from "path";
