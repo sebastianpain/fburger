@@ -8,7 +8,7 @@ import { connect } from "mongoose";
 import env from "../config/enviroment.config.js";
 export async function connectMongo() {
   try {
-    await connect(env.mongoUrl);
+    await connect(process.env.mongoUrl);
     logger.info("Conexión exitosa a la base de datos.");
   } catch (e) {
     logger.error("Falló la conexión a la base de datos.");
