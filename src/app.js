@@ -54,6 +54,8 @@ app.use(
     store: MongoStore.create({
       mongoUrl: env.mongoUrl,
       ttl: 3600,
+      useNewUrlParser: true,
+  useUnifiedTopology: true,
     }),
   }),
 );
