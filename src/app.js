@@ -53,7 +53,6 @@ app.use(
     saveUninitialized: false,
     store: MongoStore.create({
       mongoUrl: env.mongoUrl,
-      mongoOptions: { useNewUrlParser: true, useUnifiedTopology: true },
       ttl: 3600,
     }),
   }),
@@ -67,8 +66,8 @@ export const __dirname = dirname(__filename);
 
 // MIDDLEWARES BASICOS
 app.use(express.json());
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
 
 // CONFIG DEL MOTOR DE PLANTILLAS
 app.engine("handlebars", handlebars.engine());
