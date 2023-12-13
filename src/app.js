@@ -53,14 +53,7 @@ app.use(
     saveUninitialized: false,
     store: MongoStore.create({
       mongoUrl: env.mongoUrl,
-      mongoOptions: { 
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        ssl: true, // Habilitar SSL/TLS
-        sslValidate: true, // Validar certificados SSL
-        // Puedes agregar sslCA si es necesario para especificar la ruta del certificado SSL
-        // sslCA: [fs.readFileSync('ruta/al/certificado.pem')]
-      },
+      mongoOptions: { useNewUrlParser: true, useUnifiedTopology: true },
       ttl: 3600,
     }),
   }),
