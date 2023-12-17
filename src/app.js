@@ -52,7 +52,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
-      mongoUrl: env.mongoUrl,
+      mongoUrl: process.env.mongoUrl,
       useNewUrlParser: true,
   useUnifiedTopology: true,
     }),
