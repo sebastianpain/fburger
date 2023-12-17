@@ -19,7 +19,6 @@ export default {
   adminName: process.env.ADMIN_NAME,
   adminPassword: process.env.ADMIN_PASSWORD,
   persistence: process.env.PERSISTENCE,
-  apiUrl: process.env.API_URL,
   googleEmail: process.env.GOOGLE_EMAIL,
   googlePass: process.env.GOOGLE_PASS,
 };
