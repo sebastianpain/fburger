@@ -16,7 +16,7 @@ async function importModels() {
 	switch (env.persistence) {
 		case "MONGO":
 			logger.info("Database: MongoDB");
-			mongoose.connect(env.mongoUrl);
+			mongoose.connect(process.env.mongoUrl);
 			models = {
 				products: productsModel,
 				users: usersModel,
