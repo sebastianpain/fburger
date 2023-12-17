@@ -7,10 +7,7 @@
 }
 
 body {
-  background-image: url(./images/fondo4.jpg);
-  background-size:cover;
-  
-  
+  background-color: #d7d7d7;
 }
 
 .title {
@@ -22,8 +19,8 @@ body {
 }
 
 .card {
-  border-radius: 240px 240px / 80px;
-  box-shadow: 10px 0px 60px rgb(240, 240, 87);
+  border-radius: 10px 100px / 120px;
+  box-shadow: 10px 10px 30px #000;
   overflow: hidden;
   margin-bottom: 50px;
 }
@@ -33,20 +30,14 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin:20px
 }
-.btn:hover{
-  color:black (--bs-btn-hover-color);
-  background-color: #efc40c;
-  border-color:rgb(243, 6, 6) var(--bs-btn-hover-color)
-  
-}
+
 .card-title {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: 'Comico', cursive;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   width: 200px;
 }
 
@@ -67,7 +58,7 @@ body {
 }
 
 .card-price {
-  margin: 20px;
+  margin: 0;
   padding: 0;
   height: 30px;
   display: flex;
@@ -80,9 +71,8 @@ body {
 }
 
 .card-price p {
-  margin: 25px;
+  margin: 0;
   padding: 0;
-  
 }
 
 .card-item-detail {
@@ -109,7 +99,6 @@ body {
   display: flex;
   justify-content: end;
   align-items: end;
-  
 }
 
 .btnContainer a {
@@ -152,7 +141,6 @@ body {
   box-shadow: 7px 5px 19px 1px rgba(0, 0, 0, 0.46);
   -webkit-box-shadow: 7px 5px 19px 1px rgba(0, 0, 0, 0.46);
   -moz-box-shadow: 7px 5px 19px 1px rgba(0, 0, 0, 0.46);
-  background-color: white;
 }
 
 .titles {
@@ -162,7 +150,7 @@ body {
 
 .content {
   text-align: center;
-  font-size: 100%;
+  font-size: 20px;
 }
 
 .titulo {
@@ -243,9 +231,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.p.content{
-  font-size: 15px;
-}
+
 .carrito-acciones-total {
   display: flex;
   justify-content: center;
@@ -347,18 +333,17 @@ body {
 .logo {
   width: 200px;
   margin-bottom: 20px;
-  
 }
 
 .tituloPrincipal {
   color: #fff;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
-  font-weight: bolder;
-  letter-spacing: 10;
-  /* font-size: 2.5rem; */
-  /* border-top: 1px solid #fff; */
-  /* border-bottom: 1px solid #fff; */
+  font-weight: bold;
+  letter-spacing: 3;
+  font-size: 2.5rem;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   padding: 0.5rem;
   text-align: center;
 }
@@ -523,7 +508,7 @@ ul li {
   width: 70%;
   padding: 2%;
   font-weight: 600;
-  color: #7d6c6c;
+  color: #6c757d;
   cursor: pointer;
 }
 .proile-rating {
