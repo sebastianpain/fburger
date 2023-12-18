@@ -45,6 +45,7 @@ const httpServer = app.listen(PORT, () => {
   logger.info(`Levantando en puerto http://localhost:${PORT}`);
 });
 
+
 connectSocketServer(httpServer);
 app.use(
   session({
@@ -52,9 +53,9 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
-      mongoUrl: process.env.MONGO_URL,
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+      mongoUrl: env.mongoUrl,
+      mongoOptions: { useNewUrlParser: true, useUnifiedTopology: true },
+      ttl: 3600,
     }),
   }),
 );
