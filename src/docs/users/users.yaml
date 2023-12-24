@@ -110,7 +110,7 @@ paths:
           description: Usuario actualizado exitosamente.
           content:
             application/json:
-              example:
+              :
                 status: "success"
                 msg: "user updated"
                 payload:

@@ -70,7 +70,7 @@ describe("API TEST", () => {
         description: "Esta es una descripción de prueba",
         category: "Inolvidable",
         price: 5000,
-        thumbnail: "https://example.com/imagen.jpg",
+        thumbnail: "https://example/imagen.jpg",
         code: 1234,
         stock: 100,
       };
