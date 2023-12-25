@@ -262,8 +262,8 @@ body {
   z-index: 100;
 }
 
-.bg-image{
-  background-image: url("/public/images/burger-wallpaper3.jpg");
+.bg-image {
+  background-image: url("/images/burger-wallpaper3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
