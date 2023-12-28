@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600&display=swap");
 
 * {
   margin: 0;
@@ -263,7 +262,7 @@ body {
 }
 
 .bg-image {
-  background-image: url("/public/images/burger-wallpaper3.jpg");
+  background-image: url("/images/burger-wallpaper3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
