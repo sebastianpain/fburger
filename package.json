@@ -1,11 +1,11 @@
 {
-  "name": "fbackendburger",
-  "version": "1.2.0",
+  "name": "fburger",
+  "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "type": "module",
   "engines": {
-    "node": "20.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node ./src/app.js --mode PRODUCTION",
