@@ -71,7 +71,7 @@ export const __dirname = dirname(__filename);
 app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
-app.use(cors(corsOptions));
+app.use(cors());
 // CONFIG DEL MOTOR DE PLANTILLAS
 app.engine("handlebars", handlebars.engine());
 app.set("views", __dirname + "/views");
