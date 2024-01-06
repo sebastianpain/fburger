@@ -37,7 +37,7 @@ import { connectMongo, connectSocketServer, logger } from "./utils/main.js";
 // CONFIG BASICAS Y CONEXION A DB
 const app = express();
 app.use(compression({ brotli: { enabled: true, zlib: {} } }));
-const PORT = process.env.PORT || 8080;
+const PORT = env.port || 8080;
 const fileStore = FileStore(session);
 connectMongo();
 
