@@ -69,7 +69,7 @@ export const __dirname = dirname(__filename);
 
 // MIDDLEWARES BASICOS
 app.use(express.json());
-app.use(express.static('/public'));
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 // CONFIG DEL MOTOR DE PLANTILLAS
